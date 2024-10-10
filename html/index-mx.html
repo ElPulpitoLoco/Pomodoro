@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="esp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title id="title">Contador Pomodoro:</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="main-title">Contador Pomodoro<img src="../img/tomate.png" class="image0"/></h1>
+        </header>
+
+        <div class="language-selector">
+            <a href="../index.html">
+                <img src="../img/fr.png" alt="Français" id="lang-fr" class="flag"/>
+            </a>
+            <a href="index-en.html">
+                <img src="../img/eng.png" alt="English" id="lang-en" class="flag"/>
+            </a>
+            <a href="index-mx.html">
+                <img src="../img/mex.png" alt="Español" id="lang-mex" class="flag"/>
+            </a>
+        </div>
+
+        <div class="container-timer">
+            <div class="button-container-timer-options">
+                <button id="pomodoro-btn">Pomodoro (25:00)</button>
+                <button id="short-break-btn">Short Break (5:00)</button>
+                <button id="long-break-btn">Long Break (15:00)</button>
+            </div>
+            <div id="timer">25:00</div>
+            <div class="button-container-timer">
+                <button id="start-btn">START</button>
+                <button id="stop-btn" style="display: none;">Pause</button>
+                <button id="reset-btn">RESET</button>
+            </div>
+        </div>
+
+        <div class="task-container">
+            <h2 id="tasks">Mis tareas por cumplir</h2>
+            <p>Introduce aquí todas las tareas que quieras realizar durante el día.</p>
+            <input type="text" id="task-input" placeholder="Agregar una tarea..." />
+            <button id="add-task-btn">Agregar tarea</button>
+            <button id="reset-tasks-btn">Restablecer tareas</button><!--bouton pour réinitialiser les tâches-->
+            <div class="task-table">
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+
+        <div class="container-exp">
+            <h2><img src="../img/tomate2.png" class="image1"/>Explicaciòn:</h2>
+            <p id="explanation">
+                <strong>El Método Pomodoro</strong> es una técnica de gestión del tiempo desarrollada por Francesco Cirillo a finales de los años 80, diseñada para <strong>mejorar la productividad y la concentración.
+                </strong>Su principio básico se basa en dividir el trabajo en intervalos cortos, llamados <strong>"Pomodoros"</strong>, que generalmente duran 25 minutos, seguidos de un breve descanso de 5 minutos.
+            </p>
+            <div class="container-tomato">
+                <img src="../img/tomate3.png" class="image2"/>
+                <img src="../img/tomate4.png" class="image2"/>
+                <img src="../img/tomate5.png" class="image2"/>
+            </div>
+            <p>Cada Pomodoro es un <strong>espacio de trabajo</strong> durante el cual el individuo se dedica de lleno a una tarea específica, sin distracciones. El objetivo es permanecer <strong>concentrado en la tarea</strong> hasta que llegue el momento del Pomodoro y luego tomar un breve descanso para recargar las baterías. Después de cuatro Pomodoros, se toma <strong>un descanso más largo</strong>, generalmente de 15 a 30 minutos, lo que permite recargar las pilas antes de iniciar nuevos ciclos.
+            </p>
+        </div>
+
+        <footer>
+            <p>Made with blood in eyes by El Pulpito Loco</p>
+            <p>©Pomodoro 2024. All Rights Reserved.</p>
+        </footer>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>

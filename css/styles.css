@@ -1,0 +1,250 @@
+/*définition de la police MaPoliceTomate*/
+@font-face {
+    font-family: 'MaPoliceTomate'; /*nom de la police*/
+    src: url('../fonts/BungeeTint-Regular.ttf') format('truetype'); /*chemin d'accès et format de la police*/
+    font-style: normal; /*style de la police (normal ou italic)*/
+}
+
+/*définition de la police MaPoliceTimer*/
+@font-face {
+    font-family: 'MaPoliceTimer'; /*nom de la police*/
+    src: url('../fonts/Calculator.ttf') format('truetype'); /*chemin d'accès et format de la police*/
+    font-style: normal; /*style de la police (normal)*/
+}
+
+/*styles généraux pour html et body*/
+html, body {
+    height: 100%; /*prend toute la hauteur de la fenêtre du navigateur*/
+    margin: 0; /*supprime les marges par défaut*/
+}
+
+body {
+    background-color: #D46A6A; /*couleur de fond du body*/
+}
+
+/*styles pour le titre h1*/
+h1 {
+    color: white; /*couleur du texte*/
+    text-align: center; /*centre le texte*/
+    font-family: 'MaPoliceTomate', serif; /*utilise la police personnalisée*/
+    font-size: 3.2em; /*taille de la police*/
+    font-weight: bold; /*en gras*/
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 1); /*ombre portée du texte*/
+}
+
+/*styles pour le sous-titre h2*/
+h2 {
+    text-align: center; /*centre le texte*/
+    font-family: 'MaPoliceTomate', serif; /*utilise la même police personnalisée*/
+    font-size: 2em; /*taille de la police*/
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5); /*ombre portée du texte*/
+}
+
+/*styles pour les boutons*/
+button {
+    padding: 10px 10px; /*espace interne autour du texte du bouton*/
+    background-color: #801515; /*couleur de fond du bouton*/
+    color: white; /*couleur du texte du bouton*/
+    border: none; /*supprime la bordure par défaut*/
+    border-radius: 5px; /*arrondi des coins*/
+    cursor: pointer; /*change le curseur au survol*/
+    width: 140px; /*largeur fixe pour les boutons*/
+    margin: 5px; /*espace autour des boutons*/
+}
+
+/*styles pour le survol des boutons*/
+button:hover {
+    background-color: #661141; /*change la couleur de fond lors du survol*/
+}
+
+/*conteneur principal pour le timer*/
+.container-timer {
+    display: flex; /*utilise Flexbox pour la mise en page*/
+    flex-direction: column; /*aligne les éléments en colonne*/
+    justify-content: center; /*centre les éléments verticalement*/
+    align-items: center; /*centre les éléments horizontalement*/
+    height: 50vh; /*hauteur de 50% de la fenêtre*/
+    max-width: 90%; /*largeur maximale à 90% de la fenêtre*/
+    width: 500px; /*largeur fixe pour les plus petits écrans*/
+    font-family: Arial, sans-serif; /*police générique pour le texte*/
+    background-color: #AA3939; /*couleur de fond du conteneur*/
+    margin: auto; /*centre le conteneur horizontalement*/
+    border-radius: 30px; /*arrondi des coins du conteneur*/
+}
+
+/*conteneur pour garder le conteneur du timer centré à l'écran*/
+.container-wrapper {
+    display: flex; /*utilise Flexbox*/
+    justify-content: center; /*centre horizontalement*/
+    align-items: center; /*centre verticalement*/
+    height: 100%; /*utilise toute la hauteur de la page */
+}
+
+/*conteneur pour les boutons du timer*/
+.button-container-timer {
+    display: flex; /*utilise Flexbox*/
+    margin-top: 10px; /*espace au-dessus des boutons*/
+}
+
+/*le conteneur de l'explication*/
+.container-exp {
+    display: flex; /*utilise Flexbox*/
+    flex-direction: column; /*aligne les éléments en colonne*/
+    justify-content: center; /*centre les éléments verticalement*/
+    align-items: center; /*centre les éléments horizontalement*/
+}
+
+/*styles pour les paragraphes dans le conteneur d'explication*/
+.container-exp p, .task-container p {
+    background-color: #AA3939; /*couleur de fond*/
+    width: 600px; /*largeur fixe pour le paragraphe*/
+    max-width: 90%; /*largeur maximale à 90%*/
+    border-radius: 30px; /*arrondi des coins*/
+    padding: 8px; /*espace interne dans le paragraphe*/
+    text-align: center; /*centre le texte*/
+}
+
+/*styles pour le minuteur*/
+#timer {
+    font-size: 9em; /* taille de la police du minuteur*/
+    color: white; /*couleur du texte*/
+    margin: 20px 0; /*espace au-dessus et en-dessous*/
+    font-family: 'MaPoliceTimer', serif; /*utilise la police personnalisée pour le minuteur*/
+    font-weight: bold; /*en gras*/
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.8); /*ombre portée du texte*/
+}
+
+/* Conteneur pour les options de boutons du minuteur */
+.button-container-timer-options {
+    display: flex; /* Utilise Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    margin-bottom: 10px; /* Espace en bas */
+    margin-top: 10px; /* Espace en haut */
+}
+
+/* Styles pour les boutons dans les options du minuteur */
+.button-container-timer-options button {
+    margin: 0 5px; /* Espace horizontal entre les boutons */
+    width: auto; /* Largeur automatique pour s'ajuster au contenu */
+}
+
+/* Styles pour la pause courte */
+.bg-short-break {
+    background-color: #AA8C39; /* Couleur de fond pour la pause courte */
+}
+
+/* Styles pour la pause longue */
+.bg-long-break {
+    background-color: #AA6039; /* Couleur de fond pour la pause longue */
+}
+/*/////////////////////////////////////////Le liste des taches//////////////////////////////////////*/
+.task-container {
+    text-align: center; /* Centre le texte et les éléments */
+    margin: 5px 5px; /* Marge au-dessus et en dessous */
+}
+
+.task-container input {
+    padding: 10px; /* Espacement interne */
+    width: 200px; /* Largeur du champ de texte */
+    border-radius: 5px; /* Coins arrondis */
+    border: 1px solid #aaa; /* Bordure grise */
+}
+
+.task-container {
+    text-align: center; /* Aligne le texte au centre */
+    margin: 10px auto; /* Marge au-dessus et en dessous */
+    max-width: 600px; /* Limite la largeur pour le centrer correctement */
+}
+
+.task-container p {
+    text-align: center; /* Centre le texte du paragraphe */
+    margin: 0 auto; /* Assure que le paragraphe est centré */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.task-container button {
+    margin-left: 10px; /* Espace entre le champ de texte et le bouton */
+    padding: 10px; /* Espacement interne */
+}
+
+.task-table {
+    max-width: 400px; /* Largeur maximum pour le tableau */
+    margin: 20px auto; /* Centre le tableau horizontalement */
+    overflow: auto; /* Permet le défilement si nécessaire */
+}
+
+#task-list {
+    list-style-type: none; /* Supprime les puces */
+    padding: 0; /* Supprime le remplissage */
+}
+
+#task-list li {
+    display: flex; /* Utilise Flexbox pour le formatage */
+    justify-content: space-between; /* Espace entre le texte de la tâche et le bouton */
+    align-items: center; /* Aligne verticalement */
+    margin: 5px 0; /* Espace entre les éléments de la liste */
+    padding: 10px; /* Espacement interne */
+    background-color: #fff; /* Couleur de fond blanc pour les tâches */
+    border: 1px solid #aaa; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur */
+}
+
+#task-list li.completed {
+    background-color: #00cc66; /* Couleur de fond pour les tâches complètes */
+}
+
+.task-button {
+    margin-left: 10px; /* Espace entre le texte de la tâche et le bouton de suppression */
+    background-color: #FF4D4D; /* Couleur de fond pour le bouton de suppression */
+    color: white; /* Couleur du texte du bouton */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur au survol */
+    padding: 5px 10px; /* Espacement interne pour le bouton */
+}
+/*////////////////////////////Styles pour le pied de page////////////////////////*/
+footer {
+    text-align: center; /* Centre le contenu du pied de page */
+}
+
+/* Styles pour les images spécifiques */
+.image0 {
+    height: 40px; /* Hauteur de l'image */
+}
+
+.image1 {
+    height: 38px; /* Hauteur de l'image */
+    margin-right: 10px; /* Espace à droite de l'image */
+    vertical-align: middle; /* Aligne l'image verticalement */
+}
+
+/* Conteneur pour les images de tomate */
+.container-tomato {
+    display: flex; /* Utilise Flexbox */
+    justify-content: center; /* Centre les images horizontalement */
+    align-items: center; /* Aligne les images verticalement */
+}
+
+.image2 {
+    margin: 10px; /* Espace autour de l'image */
+    height: 40px; /* Hauteur de l'image */
+}
+/*/////////////////////////////les langues/////////////////////////////////////*/
+.language-selector {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.language-selector .flag {
+    width: 30px; /* Ajustez la taille selon vos besoins */
+    margin: 0 10px;
+    cursor: pointer; /* Change le curseur au survol */
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+.language-selector .flag:hover {
+    opacity: 0.8; /* Change l'opacité au survol pour l'effet visuel */
+}
